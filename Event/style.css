@@ -1,27 +1,42 @@
-*{
+/* Purane CSS ko isse replace kar dein */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Isse border/padding size badhate nahi hain */
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #212121;
 }
 
-button{
-    background-color: rgb(178, 54, 54);
-    border: none;
-    padding-inline: 20px;
-    padding-block: 7px;
-    color: whitesmoke;
-    border-radius: 5px;
-    margin-bottom: 80px;
+html, body {
+    height: 100%;
+    width: 100%;
+    /* Default dark mode ke liye */
+    background-color: #212121; 
 }
 
-div{
-    height: 200px;
-    width: 160px;
-    background-color: aliceblue;
-    cursor: pointer;
-    border-radius: 10px;
-    padding: 20px;
+body {
+    /* Isse body ek box ban jayega jiske andar elements position ho sakte hain */
     display: flex;
-    /* align-items: center; */
-    justify-content: center;
-    font-weight: 700;
+    
+    /* Elements ko container ke starting point se align karne ke liye */
+    justify-content: flex-start; /* Horizontal (Left) position ke liye */
+    align-items: flex-start;     /* Vertical (Top) position ke liye */
+    
+    /* Ye hai aapka magical solution */
+    /* Ab h1 ka margin page ko niche nahi dhakelega, isliye gap nahi aayega */
+}
+
+h1 {
+    /* Ab margin ko adjust karke "button" ko jahan chahein wahan rakhein */
+    margin-top: 50px;   /* Niche lane ke liye (aap is value ko badha/ghata sakte hain) */
+    margin-left: 50px;  /* Right side lane ke liye (aap is value ko badha/ghata sakte hain) */
+    
+    background-color: aqua;
+    width: fit-content;
+    padding-inline: 20px;
+    padding-block: 10px;
+    border-radius: 5px;
+    
+    /* Button feel dene ke liye cursor style change kar dete hain */
+    cursor: pointer; 
 }
